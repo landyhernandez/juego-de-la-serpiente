@@ -20,15 +20,19 @@ Se añade una nueva pieza cada vez que la serpiente come. Cada segmento tiene un
 Se utiliza una función que actualiza el puntaje actual y el récord máximo en pantalla, utilizando tipografía tipo Courier y texto alineado al centro superior.
 
  Funciones Principales del Código
+
 ➤ Movimiento:
 Las funciones arriba, abajo, izquierda, y derecha modifican la dirección de la serpiente. Luego, la función movimiento() actualiza su posición según la dirección seleccionada.
+
 ➤ Detección de Colisiones con la Comida
 La función colisionComida() evalúa si la cabeza está lo suficientemente cerca de la comida. Si hay colisión:
 - La comida se mueve a una nueva ubicación aleatoria.
 - Se suma un nuevo segmento al cuerpo.
 - Se incrementa el puntaje.
+  
 ➤ Movimiento del Cuerpo
 Se logra que los segmentos del cuerpo sigan a la cabeza de manera sincronizada. Esto se hace recorriendo la lista de segmentos de atrás hacia adelante y actualizando su posición con respecto al anterior.
+
 ➤ Reinicio por Colisión
 - Si la cabeza choca con el borde (borde()), el juego se reinicia: la serpiente se reinicia en el centro, se borran los segmentos, y el puntaje vuelve a cero.
 - Si la serpiente choca consigo misma (mordida()), se activa la misma lógica.
